@@ -1,0 +1,42 @@
+.alignment-self-top-left {
+  align-self: start;
+  justify-self: start;
+}
+.alignment-self-top-center {
+  align-self: start;
+  justify-self: center;
+}
+.alignment-self-top-right {
+  align-self: start;
+  justify-self: end;
+}
+.alignment-self-center-left {
+  align-self: center;
+  justify-self: start;
+}
+.alignment-self-center {
+  align-self: center;
+  justify-self: center;
+}
+.alignment-self-bottom-left {
+  align-self: end;
+  justify-self: start;
+}
+.alignment-self-bottom-center {
+  align-self: end;
+  justify-self: center;
+}
+.alignment-self-bottom-right {
+  align-self: end;
+  justify-self: end;
+}
+.alignment-self-stretch-x {
+  align-self: stretch;
+}
+.alignment-self-stretch-y {
+  justify-self: stretch;
+}
+.alignment-self-stretch {
+  align-self: stretch;
+  justify-self: stretch;
+}

@@ -1,0 +1,12 @@
+@use "../abstracts/abstracts.scss" as *;
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}

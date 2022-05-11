@@ -1,0 +1,17 @@
+@for $padding from 1 to 17 {
+  .pd-#{$padding} {
+    padding: #{$padding * 4}px;
+  }
+  .pd-t-#{$padding} {
+    padding-top: #{$padding * 4}px;
+  }
+  .pd-b-#{$padding} {
+    padding-bottom: #{$padding * 4}px;
+  }
+  .pd-r-#{$padding} {
+    padding-right: #{$padding * 4}px;
+  }
+  .pd-l-#{$padding} {
+    padding-left: #{$padding * 4}px;
+  }
+}

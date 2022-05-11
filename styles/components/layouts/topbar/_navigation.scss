@@ -1,0 +1,48 @@
+@use "../../../abstracts/abstracts" as *;
+
+$line-height: calc($meas-xxs - 4px);
+
+.navigation {
+  @include dimension($height: 100%);
+  @include flex(center);
+
+  ul.navigation__list {
+    @include flex(center);
+    @include dimension(auto, 100%);
+    li.navigation__item {
+      @include dimension(auto, 100%);
+      position: relative;
+      a.navigation__link {
+        @include flex(center);
+        @include dimension($height: 100%);
+        @include text-decor(b);
+        @include padding($meas-lg, x);
+        overflow-y: hidden;
+        ::before,
+        ::after {
+          content: "";
+          @include dimension(100%, $line-height);
+          background-color: $color-textLight;
+          transition: 0.3s all;
+        }
+        ::before {
+          @include absolute(-50px 0);
+        }
+        ::after {
+          @include absolute(100% 0);
+        }
+      }
+      &.active,
+      &:hover {
+        a.navigation__link {
+          ::before {
+            @include absolute(calc(6 * $line-height) 0);
+          }
+          ::after {
+            @include absolute(calc(100% - (6 * $line-height)) 0);
+          }
+        }
+      }
+    }
+  }
+}

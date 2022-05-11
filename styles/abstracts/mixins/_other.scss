@@ -1,0 +1,19 @@
+@mixin media($size) {
+  @if $size == phone {
+    @media (max-width: 600px) {
+      @content;
+    }
+  } @else if $size == tablet {
+    @media (max-width: 900px) {
+      @content;
+    }
+  } @else if $size == desktop {
+    @media (max-width: 1200px) {
+      @content;
+    }
+  } @else if $size == miniPhone {
+    @media (max-width: 350px) {
+      @content;
+    }
+  }
+}

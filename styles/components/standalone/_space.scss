@@ -1,0 +1,12 @@
+@for $space from 1 to 17 {
+  .space-vertical-#{$space} {
+    height: #{$space * 4}px;
+    min-height: #{$space * 4}px;
+    max-height: #{$space * 4}px;
+  }
+  .space-horizontal-#{$space} {
+    width: #{$space * 4}px;
+    min-width: #{$space * 4}px;
+    max-width: #{$space * 4}px;
+  }
+}

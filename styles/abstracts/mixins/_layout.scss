@@ -1,0 +1,99 @@
+@use "../variables" as *;
+@use "../measurment" as meas;
+
+@mixin margin($meas: meas.$md, $side: all) {
+  @if length($meas) >1 {
+    margin: $meas;
+  }
+  @if length($meas) ==1 {
+    @if $side == x {
+      margin: 0 $meas;
+    }
+    @if $side == y {
+      margin: $meas 0;
+    }
+    @if index($sides, $side) !=null {
+      margin-#{$side}: $meas;
+    }
+    @if $side==all {
+      margin: $meas;
+    }
+  }
+}
+
+@mixin padding($meas: meas.$md, $side: all) {
+  @if length($meas) >1 {
+    padding: $meas;
+  }
+  @if length($meas) ==1 {
+    @if $side == x {
+      padding: 0 $meas;
+    }
+    @if $side == y {
+      padding: $meas 0;
+    }
+    @if index($sides, $side) !=null {
+      padding-#{$side}: $meas;
+    }
+    @if $side==all {
+      padding: $meas;
+    }
+  }
+}
+
+@mixin flex($align-items, $justify-content: $align-items, $flex-direction: "") {
+  display: flex;
+  align-items: $align-items;
+  justify-content: $justify-content;
+  @if $flex-direction != "row" {
+    flex-direction: unquote($flex-direction);
+  }
+}
+
+@mixin dimension($width: auto, $height: $width) {
+  @if $width == cover {
+    height: 100%;
+    width: 100%;
+  } @else {
+    width: $width;
+    height: $height;
+  }
+}
+
+@mixin display($params) {
+  @if $params == flex {
+    display: flex;
+  } @else {
+    display: block;
+  }
+}
+
+@mixin position($position, $args) {
+  position: $position;
+  @for $i from 1 to length($args) + 1 {
+    @if $i == 1 {
+      top: nth($args, $i);
+    }
+    @if $i == 2 {
+      left: nth($args, $i);
+    }
+    @if $i == 3 {
+      bottom: nth($args, $i);
+    }
+    @if $i == 4 {
+      right: nth($args, $i);
+    }
+  }
+}
+
+@mixin absolute($args) {
+  @include position(absolute, $args);
+}
+
+@mixin fixed($args: "") {
+  @include position(fixed, $args);
+}
+
+@mixin relative($args) {
+  @include position(relative, $args);
+}

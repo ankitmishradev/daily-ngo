@@ -1,0 +1,9 @@
+@use "../../../abstracts/abstracts" as *;
+
+.topbar {
+  @include typography(dark);
+  @include dimension(100%, $meas-top-bar);
+  @include flex(center, space-between);
+  padding: 0 $meas-md;
+  z-index: 2;
+}

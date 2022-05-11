@@ -1,0 +1,28 @@
+@use "../color" as color;
+
+@mixin typography($ct: light, $bg: "") {
+  @if $ct == dark {
+    background-color: color.$primary;
+    color: color.$textLight;
+  }
+  @if $ct == light {
+    @if $bg!= "" {
+      background-color: $bg;
+    }
+    color: color.$text;
+  }
+}
+
+@mixin text-decor($args...) {
+  @each $arg in $args {
+    @if $arg == b {
+      font-weight: 600;
+    }
+    @if $arg== u {
+      text-decoration: underline;
+    }
+    @if $arg==i {
+      font-style: italic;
+    }
+  }
+}

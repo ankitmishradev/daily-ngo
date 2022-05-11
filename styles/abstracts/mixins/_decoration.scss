@@ -1,0 +1,11 @@
+@mixin transform($val) {
+  @include prefix(transform, $val);
+}
+
+@mixin transition($val) {
+  @include prefix(transition, $val);
+}
+
+@mixin shadow($val) {
+  @include prefix(box-shadow, $val);
+}

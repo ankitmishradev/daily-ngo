@@ -2,8 +2,8 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import { Page } from "../components";
 
-const Home: NextPage = () => {
-  return <Page title="Daily NGO"></Page>;
+const Campaigns: NextPage = () => {
+  return <Page title="Campaigns"></Page>;
 };
 
-export default Home;
+export default Campaigns;
