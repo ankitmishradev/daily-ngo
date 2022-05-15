@@ -1,2 +1,4 @@
-@use "./topbar/topbar";
-@use "./topbar/navigation";
+@use "main_header/main_header";
+@use "main_header/navigation";
+@use "main_header/contact_bar";
+@use "section";

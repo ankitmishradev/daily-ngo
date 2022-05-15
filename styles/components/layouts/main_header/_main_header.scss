@@ -1,0 +1,11 @@
+@use "../../../abstracts/abstracts" as *;
+
+header.main-header {
+  z-index: 2;
+  .main-header__navigation {
+    @include typography(dark);
+    @include dimension(100%, $meas-main_navigation);
+    @include flex(center, space-between);
+    padding: 0 $meas-md;
+  }
+}

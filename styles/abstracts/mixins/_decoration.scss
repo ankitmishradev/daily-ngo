@@ -1,11 +1,13 @@
-@mixin transform($val) {
-  @include prefix(transform, $val);
-}
+@use "../color" as color;
 
-@mixin transition($val) {
-  @include prefix(transition, $val);
-}
-
-@mixin shadow($val) {
-  @include prefix(box-shadow, $val);
+@mixin shadow(
+  $top: 1px,
+  $left: 1px,
+  $blur: 5px,
+  $color: color.$shadow,
+  $inset: false
+) {
+  @if $inset {
+  } @else {
+  }
 }

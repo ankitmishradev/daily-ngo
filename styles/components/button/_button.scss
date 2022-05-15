@@ -1,0 +1,10 @@
+@use "../../abstracts/abstracts.scss" as *;
+@use "flat";
+@use "outline";
+
+button.button {
+  @include padding($meas-sm $meas-xl);
+  @include shadow();
+  font-size: $meas-md;
+  border-radius: $edge;
+}

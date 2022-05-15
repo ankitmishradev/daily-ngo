@@ -1,6 +1,6 @@
 import Head from "next/head";
 import { NextPage } from "next";
-import { TopBar } from "../topbar/topbar";
+import { MainHeader } from "../";
 import { PageProps } from "./types";
 
 export const Page: NextPage<PageProps> = (props) => {
@@ -10,7 +10,7 @@ export const Page: NextPage<PageProps> = (props) => {
         <title>{props.title}</title>
       </Head>
 
-      <TopBar />
+      <MainHeader />
 
       <main>{props.children}</main>
     </>

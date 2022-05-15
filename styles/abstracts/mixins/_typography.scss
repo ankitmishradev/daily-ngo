@@ -2,7 +2,12 @@
 
 @mixin typography($ct: light, $bg: "") {
   @if $ct == dark {
-    background-color: color.$primary;
+    @if $bg!= "" {
+      background-color: $bg;
+    } @else {
+      background-color: color.$primary;
+    }
+
     color: color.$textLight;
   }
   @if $ct == light {
@@ -23,6 +28,15 @@
     }
     @if $arg==i {
       font-style: italic;
+    }
+    @if $arg==upper {
+      text-transform: uppercase;
+    }
+    @if $arg==cap {
+      text-transform: capitalize;
+    }
+    @if $arg==lower {
+      text-transform: lower;
     }
   }
 }

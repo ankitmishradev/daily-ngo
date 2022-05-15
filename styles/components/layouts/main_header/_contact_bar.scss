@@ -1,0 +1,24 @@
+@use "../../../abstracts/abstracts.scss" as *;
+
+nav.contact-bar {
+  @include typography(dark, $color-secondary);
+  @include dimension(100%, $meas-main_contact);
+  padding: 0 $meas-md;
+
+  ul.contact-bar__list {
+    @include flex(center, start);
+    @include dimension(cover);
+    li.contact-bar__item {
+      @include bg-hover($color-white $color-secondary);
+      @include dimension(auto, 100%);
+      a.contact-bar__link {
+        @include flex(center);
+        @include dimension($height: 100%);
+        @include padding($meas-md, x);
+        span {
+          @include margin($meas-xxs, left);
+        }
+      }
+    }
+  }
+}

@@ -2,7 +2,7 @@
 
 $line-height: calc($meas-xxs - 4px);
 
-.navigation {
+nav.navigation {
   @include dimension($height: 100%);
   @include flex(center);
 
@@ -11,34 +11,34 @@ $line-height: calc($meas-xxs - 4px);
     @include dimension(auto, 100%);
     li.navigation__item {
       @include dimension(auto, 100%);
+      overflow: hidden;
       position: relative;
       a.navigation__link {
         @include flex(center);
         @include dimension($height: 100%);
         @include text-decor(b);
         @include padding($meas-lg, x);
-        overflow-y: hidden;
-        ::before,
-        ::after {
+        &::before,
+        &::after {
           content: "";
           @include dimension(100%, $line-height);
           background-color: $color-textLight;
           transition: 0.3s all;
         }
-        ::before {
+        &::before {
           @include absolute(-50px 0);
         }
-        ::after {
+        &::after {
           @include absolute(100% 0);
         }
       }
       &.active,
       &:hover {
         a.navigation__link {
-          ::before {
+          &::before {
             @include absolute(calc(6 * $line-height) 0);
           }
-          ::after {
+          &::after {
             @include absolute(calc(100% - (6 * $line-height)) 0);
           }
         }

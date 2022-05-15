@@ -1,0 +1,17 @@
+@use "../../abstracts/abstracts.scss" as *;
+
+button.button_flat {
+  &.flat__bg-s2w {
+    @include bg-hover(
+      $color-secondary $color-textLight,
+      $color-white $color-secondary
+    );
+  }
+
+  &.flat__bg-w2s {
+    @include bg-hover(
+      $color-white $color-secondary,
+      $color-secondary $color-textLight
+    );
+  }
+}

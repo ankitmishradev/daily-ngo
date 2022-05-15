@@ -1,0 +1,31 @@
+@use "../../abstracts/abstracts.scss" as *;
+
+.qis {
+  ul.qis__list {
+    @include flex(center, start);
+    li.qis-item {
+      @include padding($meas-xl);
+      @include shadow();
+      border-radius: $edge;
+      background-image: linear-gradient(
+        160deg,
+        #115b9b -25%,
+        #1290f8 50%,
+        #115b9b 125%
+      );
+      color: $color-textLight;
+      & > * {
+        text-align: center;
+      }
+
+      main.qis-item__main {
+        h3.qis-item__title {
+          @include text-decor(upper);
+        }
+        p.qis-item__description {
+          text-align: justify;
+        }
+      }
+    }
+  }
+}

@@ -1,6 +1,8 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { NavigationItem } from "../types";
+
+import { navigationItems } from "./data";
+import { NavigationItem } from "./types";
 
 export const NavigationDiv = (props: NavigationItem) => {
   const router = useRouter();
@@ -17,5 +19,17 @@ export const NavigationDiv = (props: NavigationItem) => {
         </a>
       </Link>
     </li>
+  );
+};
+
+export const Navigation = () => {
+  const NavigationDivs = navigationItems.map((item, i) => {
+    return <NavigationDiv key={i} href={item.href} name={item.name} />;
+  });
+
+  return (
+    <nav className="navigation">
+      <ul className="navigation__list">{NavigationDivs}</ul>
+    </nav>
   );
 };
