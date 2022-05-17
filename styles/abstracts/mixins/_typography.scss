@@ -21,21 +21,25 @@
 @mixin text-decor($args...) {
   @each $arg in $args {
     @if $arg == b {
-      font-weight: 600;
+      & {
+        font-weight: 600;
+      }
     }
-    @if $arg== u {
-      text-decoration: underline;
+    @if $arg == u {
+      & {
+        text-decoration: underline;
+      }
     }
-    @if $arg==i {
+    @if $arg ==i {
       font-style: italic;
     }
-    @if $arg==upper {
+    @if $arg == upper {
       text-transform: uppercase;
     }
-    @if $arg==cap {
+    @if $arg == cap {
       text-transform: capitalize;
     }
-    @if $arg==lower {
+    @if $arg == lower {
       text-transform: lower;
     }
   }

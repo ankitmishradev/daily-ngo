@@ -17,7 +17,7 @@ export const Qis = () => {
       <Item key={i} />
     ) : (
       <>
-        <Space axis="horizontal" factor="4" />
+        <Space key={i} axis="horizontal" factor="4" />
         <Item key={i} />
       </>
     );

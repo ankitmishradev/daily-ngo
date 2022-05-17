@@ -20,7 +20,8 @@
 
       main.qis-item__main {
         h3.qis-item__title {
-          @include text-decor(upper);
+          font-weight: $bold;
+          text-transform: uppercase;
         }
         p.qis-item__description {
           text-align: justify;

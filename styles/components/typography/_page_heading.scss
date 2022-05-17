@@ -1,0 +1,33 @@
+@use "../../abstracts/abstracts.scss" as *;
+
+$upperLHeight: 1px;
+$lowerLHeight: 2px;
+
+@mixin underline {
+  &::after,
+  &::before {
+    content: "";
+    background-color: $color-primary;
+    position: absolute;
+  }
+  &::before {
+    @include dimension(280px, $upperLHeight);
+    @include absolute(calc(80% - ($lowerLHeight + $upperLHeight)));
+  }
+  &::after {
+    @include dimension(100px, $lowerLHeight);
+    @include absolute(calc(80% - ($lowerLHeight)));
+  }
+}
+
+section.page-heading {
+  @include underline();
+  position: relative;
+  flex-direction: column;
+
+  h1.page-heading__text {
+    text-transform: uppercase;
+    font-size: $meas-xxl;
+    font-weight: 600;
+  }
+}

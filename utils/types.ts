@@ -1,3 +1,5 @@
+export type Alignment = "Left" | "right" | "center";
+
 export type Axis = "vertical" | "horizontal";
 
 export type Breakpoints =

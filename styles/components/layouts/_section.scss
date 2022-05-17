@@ -1,5 +1,5 @@
 @use "../../abstracts/abstracts.scss" as *;
 
 section.section {
-  @include padding($meas-section_padding, x);
+  @include padding($meas-section_padding);
 }

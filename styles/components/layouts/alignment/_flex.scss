@@ -1,0 +1,13 @@
+@use "../../../abstracts/abstracts.scss" as *;
+
+.flex__left {
+  @include flex(center, start);
+}
+
+.flex__right {
+  @include flex(center, end);
+}
+
+.flex__center {
+  @include flex(center);
+}
